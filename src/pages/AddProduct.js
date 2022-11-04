@@ -2,7 +2,7 @@ import React from "react";
 const AddProduct = () =>{
     return(
      <di>
-        <h1>Add New product</h1>
+        <h1 style={{marginLeft: "15rem"}} >Add New product</h1>
       
 
 

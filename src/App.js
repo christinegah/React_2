@@ -47,62 +47,16 @@ const addItem = ()=>{
 
 
   return (
+   
     <>
+
     <Navbar />
     <Routes>
-  <Route path='/' element={<Home/>}/>
-  <Route path='/AddNew' element={<AddProduct/>}/>
+  <Route path='/' element={<Home items={items}/>}/>
+  <Route path='/AddProduct' element={<AddProduct addItem={addItem} changeItem={changeItem}/>}/>
     </Routes>
 
-    <div className="container">
-      <div className="row">
-        <div className="col col-6">
-
-          <ul className="list-group">
-            {
-              items.map(function(item,index)
-              {
-                return(
-                  <li key={index} className="list-group-item">
-                   <div ><img style={{width: "10%",height: "10%",marginLeft: "-1rem"}} src={item.image} /></div>
-                  <div>{item.name}</div>
-                  <div>{item.price}</div>
-             
-                </li>
-                )
-              })
-            }
-           
-          </ul>
-        </div>
-        </div>
-
-
-
-
-     <div className="col col-6" >
-     <div className="mb-3">
-  <label className="form-label">Name</label>
-  <input value={item.name} onChange={changeItem} name='name' type="text" className="form-control"  placeholder="name" />
-</div>
-
-<div className="mb-3">
-  <label className="form-label">price</label>
-  <input value={item.price}  onChange={changeItem} name='price' type="number" className="form-control"  placeholder="345556 rwf" />
-</div>
-
-<div className="mb-3">
-  <input value={item.image}  onChange={changeItem} name='image' type="url" className="form-control"  placeholder="Upload your image" />
-</div>
-
-<div className='mb4'>
-  <button onClick={addItem} className='btn btn-warning'>SAVE</button>
-
-</div>
-
-      </div>
-
-    </div>
+  
     </>
   );
 }

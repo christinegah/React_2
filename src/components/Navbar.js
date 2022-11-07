@@ -9,8 +9,8 @@ function Navbar(){
           
    
                        <div className="collapse navbar-collapse" id="navbarNav">
-                          < Link style={{marginLeft: "15rem"}}  className="btn btn-warning" NPM Saria-current="page" to="./">Home </ Link>
-                              < Link style={{marginLeft: "15rem"}}  className="btn btn-warning" to="/Addnew">Add New</ Link>
+                          < Link style={{marginLeft: "15rem"}}  className="btn btn-warning" aria-current="page" to="./">Home </ Link>
+                              < Link style={{marginLeft: "15rem"}}  className="btn btn-warning" to="/AddProduct">AddProduct</ Link>
                         </div>
                  </div>
 </nav>

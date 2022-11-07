@@ -3,7 +3,7 @@ import Navbar  from "../components/Navbar";
 const AddProduct = (props) =>{
     return(
 
-        <div className="col col-6" >
+        <div className="col col-6"  style={{marginLeft: "10%"}} >
         <div className="mb-3">
      <label className="form-label">Name</label>
      <input onChange={props.changeItem} name='name' type="text" className="form-control"  placeholder="name" />
@@ -15,6 +15,7 @@ const AddProduct = (props) =>{
    </div>
    
    <div className="mb-3">
+    <label className="form-label">Image</label>
      <input onChange={props.changeItem} name='image' type="url" className="form-control"  placeholder="Upload your image" />
    </div>
    
